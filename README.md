@@ -1,4 +1,4 @@
-# docker -  ElasticSearch, Logstash, and Kibana
+# ELK -  ElasticSearch, Logstash, and Kibana
 
 ### Ambiente en produccion
 ElasticSearch se encuentra con su base de datos en estado persistente para produccion, se utliza EFS en AWS
