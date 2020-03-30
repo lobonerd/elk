@@ -9,11 +9,19 @@ el disco es montado en todos los servidores del cluster y dentro del disco se de
 
 Una vez en el directorio elk
 
-$ docker stack deploy --compose-file docker-compose.yaml elk
+Ajustar memoria virutal
 
-para deternlo
+sysctl -w vm.max_map_count=262144
 
-$ docker stack rm elk
+se debe asegurar que los directorios de datos persistentes tengan permiso de escritura
+
+$ docker stack deploy --compose-file docker-compose.yaml elk. # swarm mode
+$ docker-compose up -D # para correr todo en un solo servidor
+
+para detenerlo
+
+$ docker stack rm elk. # swarm mode
+$ docker-compose down # para correr todo en un solo servidor
 
  
 
