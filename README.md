@@ -15,13 +15,19 @@ sysctl -w vm.max_map_count=262144
 
 se debe asegurar que los directorios de datos persistentes tengan permiso de escritura
 
-$ docker stack deploy --compose-file docker-compose.yaml elk. # swarm mode
-$ docker-compose up -D # para correr todo en un solo servidor
+# para arrancarlo en el un solo host
+$ docker stack deploy --compose-file docker-compose.yaml elk. 
+
+# swarm mode
+$ docker-compose up -d # para correr todo en un solo servidor
 
 para detenerlo
 
-$ docker stack rm elk. # swarm mode
-$ docker-compose down # para correr todo en un solo servidor
+# swarm mode
+$ docker stack rm elk. 
 
+# para detenerlo en el un solo host
+
+$ docker-compose down 
  
 
